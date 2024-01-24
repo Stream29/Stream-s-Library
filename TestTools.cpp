@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Stream's Library/VectorIO.cpp"
+#include "VectorIO.cpp"
 
 #include <typeinfo>
 #include <cxxabi.h>
@@ -16,5 +16,10 @@ template <typename... T>
 void print(T&& ...args)
 {
 	((std::cout << std::forward<T>(args) << ' '), ...) << std::endl;
+}
+
+inline void wait()
+{
+	system("pause");
 }
 
