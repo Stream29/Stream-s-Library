@@ -18,10 +18,12 @@ std::istream& operator >>(std::istream& is,Container auto& v)
 
 std::ostream& operator <<(std::ostream& os,const Container auto& v)
 {
+	os << '{';
 	for(const auto& e : v)
 	{
-		os << e << ' ';
+		os << e << ',';
 	}
+	os << '}';
 	return os;
 }
 
